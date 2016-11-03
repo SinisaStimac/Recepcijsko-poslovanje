@@ -1,2 +1,23 @@
+student	CREATE TABLE `student` (
+  `ID` int(50) NOT NULL AUTO_INCREMENT,
+  `Ime` text COLLATE cp1250_croatian_ci,
+  `Prezime` text COLLATE cp1250_croatian_ci,
+  `email` varchar(100) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `OIB` varchar(100) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Datum_rodjenja` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Adresa` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Grad` text COLLATE cp1250_croatian_ci,
+  `Postanski_broj` int(50) DEFAULT NULL,
+  `Zemlja` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Telefon` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Studij` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Soba_broj` int(50) DEFAULT NULL,
+  `Broj_kartice` int(50) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `OIB` (`OIB`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci COMMENT='Podaci o studentima'	
+
+INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+
 INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', 'sstimac@unipu.hr', '1234567891234', '01.01.1970', 'Mihovila 3', 'Pula', '52100', 'Hrvatska', '555336', 'informatika', '1', '10');
 
