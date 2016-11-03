@@ -1,2 +1,2 @@
-INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', 'sstimac@unipu.hr', '1234567891234', '01.01.1970', 'Mihovila 3', 'Pula', '52100', 'Hrvatska', '555336', 'informatika', '1', '10');
 
