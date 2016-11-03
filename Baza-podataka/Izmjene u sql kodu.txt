@@ -1,0 +1,2 @@
+INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+
