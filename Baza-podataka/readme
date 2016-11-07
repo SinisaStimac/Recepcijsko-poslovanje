@@ -1,3 +1,5 @@
 Izrada baze podataka za web aplikaciju.
 
-Tablice: Student
+Cijela baza je u folderu recepcijsko@0020poslovanje
+Za testiranje baze kopirati cijeli folder i staviti ga u instalacijski folder wamp64/bin/mysql/msql5.7.14/data/
+Nakon pokretanja phpmyadmin folder recepcijsko@0020poslovanje mora biti prikazan kao baza podataka.
