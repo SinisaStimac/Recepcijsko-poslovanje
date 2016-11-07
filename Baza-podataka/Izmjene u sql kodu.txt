@@ -56,6 +56,9 @@ ALTER TABLE `troskovi` ADD INDEX(`ID_racuna`);
 
 ALTER TABLE `troskovi` ADD INDEX(`ID_usluga`);
 
+ALTER TABLE `racuni` CHANGE `Placeno` `Placeno` DATETIME(1) NOT NULL;
+
+
 
 
 
