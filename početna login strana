@@ -3,12 +3,12 @@ session_start();
 if (isset($_POST['username'])) {
 	include_once("dbConnect.php");
 
-	$usname = strip_tags($_POST['username']);
+	$usname = strip_tags($_POST['user']);
 	$paswd = strip_tags($_POST['password']);
 	
 	if ($usname == $dbUsname && $paswd == $dbPassword) {
 
-		$_SESSION['username'] = $usname;
+		$_SESSION['user'] = $usname;
 		$_SESSION['id'] = $uid;
 
 		header("Location: user.php");
