@@ -21,3 +21,4 @@ INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`,
 
 INSERT INTO `student` (`ID`, `Ime`, `Prezime`, `email`, `OIB`, `Datum_rodjenja`, `Adresa`, `Grad`, `Postanski_broj`, `Zemlja`, `Telefon`, `Studij`, `Soba_broj`, `Broj_kartice`) VALUES (NULL, 'Siniša', 'Štimac', 'sstimac@unipu.hr', '1234567891234', '01.01.1970', 'Mihovila 3', 'Pula', '52100', 'Hrvatska', '555336', 'informatika', '1', '10');
 
+CREATE TABLE `recepcijsko poslovanje`.`Racuni` ( `ID_racuna` INT NOT NULL , `ID_student` INT NOT NULL , `Datum` DATE NOT NULL , `Aktivan_racun` BOOLEAN NOT NULL , `Placeno` BOOLEAN NOT NULL , PRIMARY KEY (`ID_racuna`), UNIQUE (`ID_student`)) ENGINE = MyISAM CHARSET=cp1250 COLLATE cp1250_croatian_ci;
