@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2016 at 07:58 AM
+-- Generation Time: Nov 23, 2016 at 01:37 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES cp1250 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `recepcijsko poslovanje`
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `korisnici` (
   `ID_korisnik` int(20) NOT NULL,
-  `Ime` text COLLATE cp1250_croatian_ci NOT NULL,
-  `Prezime` text COLLATE cp1250_croatian_ci NOT NULL,
+  `ime` char(50) COLLATE cp1250_croatian_ci NOT NULL,
+  `prezime` char(50) COLLATE cp1250_croatian_ci NOT NULL,
   `email` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
   `ID_lvl` int(20) NOT NULL,
   `username` varchar(100) COLLATE cp1250_croatian_ci NOT NULL,
@@ -40,8 +40,8 @@ CREATE TABLE `korisnici` (
 -- Dumping data for table `korisnici`
 --
 
-INSERT INTO `korisnici` (`ID_korisnik`, `Ime`, `Prezime`, `email`, `ID_lvl`, `username`, `password`) VALUES
-(1, 'ime', 'prezime', NULL, 2, 'test', 'test');
+INSERT INTO `korisnici` (`ID_korisnik`, `ime`, `prezime`, `email`, `ID_lvl`, `username`, `password`) VALUES
+(3, '', '', 'name@hr.hr', 1, 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -60,22 +60,36 @@ CREATE TABLE `racuni` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sobe`
+--
+
+CREATE TABLE `sobe` (
+  `ID_sobe` int(10) NOT NULL,
+  `opis` varchar(300) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `soba_cista` tinyint(1) DEFAULT NULL,
+  `Soba_izdana` tinyint(1) DEFAULT NULL,
+  `br_sobe` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student`
 --
 
 CREATE TABLE `student` (
-  `ID` int(11) NOT NULL,
-  `Ime` char(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Prezime` char(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `email` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `OIB` varchar(11) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Datum_rodjenja` int(11) DEFAULT NULL,
-  `Adresa` char(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Grad` char(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Postanski_broj` int(20) DEFAULT NULL,
-  `Zemlja` char(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Telefon` varchar(15) COLLATE cp1250_croatian_ci DEFAULT NULL,
-  `Studij` varchar(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `ID` int(10) NOT NULL,
+  `Ime` char(50) COLLATE cp1250_croatian_ci NOT NULL,
+  `Prezime` char(50) COLLATE cp1250_croatian_ci NOT NULL,
+  `email` varchar(50) COLLATE cp1250_croatian_ci NOT NULL,
+  `OIB` int(11) NOT NULL,
+  `Datum_rodjenja` varchar(11) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Adresa` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Grad` char(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Postanski_broj` int(50) DEFAULT NULL,
+  `Zemlja` char(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Telefon` varchar(20) COLLATE cp1250_croatian_ci DEFAULT NULL,
+  `Studij` varchar(50) COLLATE cp1250_croatian_ci DEFAULT NULL,
   `Soba_broj` int(10) DEFAULT NULL,
   `Broj_kartice` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci COMMENT='Podaci o studentima';
@@ -114,7 +128,8 @@ CREATE TABLE `usluge` (
 -- Indexes for table `korisnici`
 --
 ALTER TABLE `korisnici`
-  ADD PRIMARY KEY (`ID_korisnik`);
+  ADD PRIMARY KEY (`ID_korisnik`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `racuni`
@@ -122,6 +137,13 @@ ALTER TABLE `korisnici`
 ALTER TABLE `racuni`
   ADD PRIMARY KEY (`ID_racuna`),
   ADD KEY `ID_studenta` (`ID_studenta`);
+
+--
+-- Indexes for table `sobe`
+--
+ALTER TABLE `sobe`
+  ADD PRIMARY KEY (`ID_sobe`),
+  ADD UNIQUE KEY `br_sobe` (`br_sobe`);
 
 --
 -- Indexes for table `student`
@@ -152,7 +174,7 @@ ALTER TABLE `usluge`
 -- AUTO_INCREMENT for table `korisnici`
 --
 ALTER TABLE `korisnici`
-  MODIFY `ID_korisnik` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_korisnik` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `racuni`
 --
@@ -162,7 +184,7 @@ ALTER TABLE `racuni`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `troskovi`
 --
