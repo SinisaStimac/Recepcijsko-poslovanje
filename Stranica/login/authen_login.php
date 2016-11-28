@@ -31,15 +31,15 @@ if ($count == 1)
 
 
 	$_SESSION['login_user']= $username;  //spremanje sesije
-	header("refresh: 1; url=index.php"); 
-//	echo "<script type='text/javascript'>alert('Autorizacija uspješna!')</script>";
+	header("refresh: 1; url=http://localhost/stranica/index/index.php"); 
+
 
 
 }
 
 else{
 
-header("refresh: 1 ; url=login.php"); 
+header("refresh: 1 ; url=http://localhost/stranica/login/login.php"); 
 echo "<script type='text/javascript'>alert('Autorizacija neuspješna!')</script>";
 //echo "Neuspješna autorizacija";
 

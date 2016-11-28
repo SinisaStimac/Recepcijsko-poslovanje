@@ -3,6 +3,7 @@
 
 <head>
 <title>Recepcijsko poslovanje</title>
+
 <link rel="stylesheet" type="text/css" href="base.css" /> 
 <link rel="stylesheet" type="text/css" href="login.css" />
 
@@ -21,7 +22,7 @@
     <div id="header_login">
         <div id="branding">
         
-<h1 id="site-name">Recepcijsko poslovanje</h1>
+<h1 id="site-name"><a href="/stranica/login.php">Recepcijsko poslovanje</a></h1>
 
         </div>    
     </div>

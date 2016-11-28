@@ -809,7 +809,17 @@ table#change-history tbody th {
     width: auto;
     height: 40px;
     padding: 10px 40px;
-    background: #417690;
+    background: #800000; /*boja (bordo) pozadine header*/
+    line-height: 40px;
+    color: #ffc;
+    overflow: hidden;
+}
+
+#header_login {
+    width: auto;
+    height: 40px;
+    padding: 10px 40px;
+    background: #417690; /*boja (plava) pozadine header*/
     line-height: 40px;
     color: #ffc;
     overflow: hidden;

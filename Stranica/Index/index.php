@@ -35,12 +35,12 @@ include('session.php'); //uključi provjeru sesije
         <div id="user-tools">
             
                 
-               <strong>Dobrodošli</strong>
+               <strong>Dobro došli</strong>
 
                 &emsp;
             
                              
-                <strong><a href="/stranica/logout.php">Log out</a></strong>
+                <strong><a href="/stranica/login/logout.php">Odjava</a></strong>
             
         </div>
         
@@ -71,30 +71,30 @@ include('session.php'); //uključi provjeru sesije
            
            <tr class="model-student">
             
-                <th scope="row"><a href="/reception/student/">Students</a></th>
+                <th scope="row"><a href="http://localhost/stranica/studenti/studenti.php">Studenti</a></th>
             
 
             
-                <td><a href="/reception/student/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/student/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr>
 
 
             <tr class="model-studentinvoice">
             
-                <th scope="row"><a href="/reception/studentinvoice/">Student invoices</a></th>
+                <th scope="row"><a href=" ">Računi studenta</a></th>
             
 
             
-                <td><a href="/reception/studentinvoice/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/studentinvoice/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr>
 
@@ -103,30 +103,30 @@ include('session.php'); //uključi provjeru sesije
 
              <tr class="model-service">
             
-                <th scope="row"><a href="/reception/service/">Services</a></th>
+                <th scope="row"><a href=" ">Usluge</a></th>
             
 
             
-                <td><a href="/reception/service/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/service/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr>
 
 
             <tr class="model-room">
             
-                <th scope="row"><a href="/reception/room/">Rooms</a></th>
+                <th scope="row"><a href=" ">Sobe</a></th>
             
 
             
-                <td><a href="/reception/room/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/room/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr>
 
@@ -135,29 +135,29 @@ include('session.php'); //uključi provjeru sesije
         
             <tr class="model-gueststatus">
             
-                <th scope="row"><a href="/reception/gueststatus/">Guest</a></th>
+                <th scope="row"><a href=" ">Gosti</a></th>
             
 
             
-                <td><a href="/reception/gueststatus/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/gueststatus/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
            
         
             <tr class="model-reservation">
             
-                <th scope="row"><a href="/reception/reservation/">Reservations</a></th>
+                <th scope="row"><a href=" ">Rezervacije</a></th>
             
 
             
-                <td><a href="/reception/reservation/add/" class="addlink">Add</a></td>
+                <td><a href=" " class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/reception/reservation/" class="changelink">Change</a></td>
+                <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr> 
         
@@ -172,12 +172,12 @@ include('session.php'); //uključi provjeru sesije
         
 <div id="content-related">
     <div class="module" id="recent-actions-module">
-        <h2>Recent actions</h2>
-        <h3>My actions</h3>
+        <h2>Nedavne akcije</h2>
+        <h3>Moje akcije</h3>
             
             
             
-            <p>None available</p>
+            <p>-------</p>
             
     </div>
 </div>

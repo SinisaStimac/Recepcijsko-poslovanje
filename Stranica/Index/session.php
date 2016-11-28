@@ -5,7 +5,7 @@ if(!isset($_SESSION["login_user"]))
 
 {
 
-header("refresh: 0.05 ; url=login.php"); 
+header("refresh: 0.05 ; url=http://localhost/stranica/login/login.php"); 
 echo "<script type='text/javascript'>alert('Niste ulogirani!')</script>";
 
 //echo "Sesija je istekla";
@@ -14,7 +14,7 @@ echo "<script type='text/javascript'>alert('Niste ulogirani!')</script>";
 
 else{
 
-header("refresh; url=index.php");
+header("refresh; url=http://localhost/stranica/index/index.php");
 
 
 }
