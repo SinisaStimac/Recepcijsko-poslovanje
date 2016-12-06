@@ -75,18 +75,18 @@ include('session.php'); //uključi provjeru sesije
             
 
             
-                <td><a href=" " class="addlink">Dodaj</a></td>
+                <td><a href="http://localhost/stranica/studenti/dodajstudenta.php" class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href=" " class="changelink">Izmjeni</a></td>
+                <td><a href="http://localhost/stranica/studenti/studenti.php" class="changelink">Izmjeni</a></td>
             
             </tr>
 
 
             <tr class="model-studentinvoice">
             
-                <th scope="row"><a href=" ">Računi studenta</a></th>
+                <th scope="row"><a href="http://localhost/stranica/racuni/racun_student"">Računi studenta</a></th>
             
 
             
@@ -103,15 +103,15 @@ include('session.php'); //uključi provjeru sesije
 
              <tr class="model-service">
             
-                <th scope="row"><a href=" ">Usluge</a></th>
+                <th scope="row"><a href="/Stranica/Usluge/usluge.php">Usluge</a></th>
             
 
             
-                <td><a href=" " class="addlink">Dodaj</a></td>
+                <td><a href="/Stranica/Usluge/usluge.php" class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href=" " class="changelink">Izmjeni</a></td>
+                <td><a href="/Stranica/Usluge/izmjena_usluge.php" class="changelink">Izmjeni</a></td>
             
             </tr>
 
@@ -133,6 +133,8 @@ include('session.php'); //uključi provjeru sesije
 
 
         
+          
+
             <tr class="model-gueststatus">
             
                 <th scope="row"><a href=" ">Gosti</a></th>
@@ -160,6 +162,8 @@ include('session.php'); //uključi provjeru sesije
                 <td><a href=" " class="changelink">Izmjeni</a></td>
             
             </tr> 
+
+            
         
             
         

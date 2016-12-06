@@ -20,7 +20,7 @@ $username = mysqli_real_escape_string($connection, $username);
 $password = mysqli_real_escape_string($connection, $password);
 
 // provjeri da li ima istovjetne username i password u bazi
-$query = "SELECT * FROM `korisnici` WHERE username='$username' and password='$password'";
+$query = "SELECT * FROM `korisnici` WHERE BINARY username='$username' and password='$password'"; //case sensitive
  
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 $count = mysqli_num_rows($result);

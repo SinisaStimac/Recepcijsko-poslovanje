@@ -1,10 +1,10 @@
 <?php
-// Start the PHP session
+// pokreni PHP session
 session_start();
 
-// remove all PHP session variables
+// makni sve PHP session varijable
 session_unset();
-// destroy the PHP session
+// uništi PHP session
 session_destroy();
 header("refresh: 1 ; url=http://localhost/stranica/login/login.php");
 
