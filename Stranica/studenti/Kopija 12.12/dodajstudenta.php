@@ -10,8 +10,7 @@ include('session.php'); //uključi provjeru sesije
 <link rel="stylesheet" type="text/css" href="forms.css">
 
 <head>
-<!-- <meta charset="utf8mb4_croatian_ci"> -->
-
+<meta charset="utf8mb4_croatian_ci">
 <title>Add Record Form</title>
 </head>
 

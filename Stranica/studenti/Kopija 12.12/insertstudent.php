@@ -7,7 +7,7 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-mysqli_set_charset($link,"utf8");
+
 
 $ime = mysqli_real_escape_string($link, $_POST['ime']);
 $prezime = mysqli_real_escape_string($link, $_POST['prezime']);

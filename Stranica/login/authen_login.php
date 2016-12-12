@@ -39,9 +39,8 @@ if ($count == 1)
 
 else{
 
-header("refresh: 1 ; url=http://localhost/stranica/login/login.php"); 
-echo "<script type='text/javascript'>alert('Autorizacija neuspješna!')</script>";
-//echo "Neuspješna autorizacija";
+header("refresh: 1; url=http://localhost/stranica/login/login.php"); 
+
 
 }
 
