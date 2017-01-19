@@ -1,6 +1,8 @@
 <?php
 include('session.php'); //uključi provjeru sesije
+include('odaberistudenta.php');
 ?>
+
 
 <!DOCTYPE html>
 
@@ -10,7 +12,8 @@ include('session.php'); //uključi provjeru sesije
 <link rel="stylesheet" type="text/css" href="forms.css">
 
 <head>
-<meta charset="utf8mb4_croatian_ci">
+<!-- <meta charset="utf8mb4_croatian_ci"> -->
+
 <title>Add Record Form</title>
 </head>
 
@@ -48,22 +51,22 @@ include('session.php'); //uključi provjeru sesije
 <div class="breadcrumbs">
 <a href="http://localhost/stranica/index/index.php">Početna</a>
 › <a href="http://localhost/stranica/studenti/studenti.php">Studenti</a>
-› Dodaj studenta
+› Izmijeni studenta
 </div>
 
     
     <!-- Content -->
     <div id="content" class="colM">
         
-        <h1>Dodaj studenta</h1>
+        <h1>Izmijeni studenta</h1>
         <div id="content-main">
 
 
 
-    <form action="insertstudent.php" method="post" id="student_form" ><input type="hidden">
+    <form action="editstudent.php" method="post" id="student_form" ><input type="hidden">
     <div>
 
-
+    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
 
      <fieldset class="module aligned">    
     
@@ -75,7 +78,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="required" for="id_first_name">Ime:</label>
                         
-                            <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required="">
+                            <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required="" value="<?php echo $row['ime'] ?>">
                         
              
                 </div>
@@ -85,7 +88,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="required inline" for="id_last_name">Prezime:</label>
                         
-                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required="">
+                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required="" value="<?php echo $row['prezime'] ?>">
                         
                   
                 </div>
@@ -99,7 +102,7 @@ include('session.php'); //uključi provjeru sesije
                  
                         <label for="id_date_of_birth">Datum rođenja:</label>
                         
-                            <input class="vDateField" id="id_date_of_birth" name="datum_rod" size="10" type="text">
+                            <input class="vDateField" id="id_date_of_birth" name="datum_rod" size="10" type="text" value="<?php echo $row['datum_rod'] ?>">
                  
                     
                 </div>
@@ -109,13 +112,11 @@ include('session.php'); //uključi provjeru sesije
     
         <div class="form-row field-oib_id field-email field-phone ">
 
-
-
                 <div class="field-box field-oib_id">
                     
                     
                         <label class="required" for="id_oib_id">OIB:</label>
-                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required="">
+                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required="" value="<?php echo $row['oib'] ?>">
                         <!-- ograničili smo unos na 11 znakva-->
                  
                 </div>
@@ -126,7 +127,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_email">E-mail:</label>
                         
-                            <input class="vTextField" id="id_email" maxlength="254" name="email" type="email">
+                            <input class="vTextField" id="id_email" maxlength="254" name="email" type="email" value="<?php echo $row['email'] ?>">
                    
                 </div>
 
@@ -135,7 +136,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_phone_home">Telefon:</label>
                         
-                        <input class="vTextField" id="id_phone_home" maxlength="255" name="telefon" type="text">                 
+                        <input class="vTextField" id="id_phone_home" maxlength="255" name="telefon" type="text" value="<?php echo $row['telefon'] ?>">                 
                 
                 </div>
         </div>
@@ -151,7 +152,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_address">Adresa:</label>
                         
-                        <input class="vTextField" id="address" maxlength="255" name="adresa" type="text">
+                        <input class="vTextField" id="address" maxlength="255" name="adresa" type="text" value="<?php echo $row['adresa'] ?>">
                         
                     
                     
@@ -162,7 +163,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="inline" for="id_city">Grad:</label>
                         
-                            <input class="vTextField" id="id_city" maxlength="255" name="grad" type="text">
+                            <input class="vTextField" id="id_city" maxlength="255" name="grad" type="text" value="<?php echo $row['grad'] ?>">
                 
                 </div>
 
@@ -171,7 +172,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="inline" for="field-zip_code">Poštanski broj:</label>
                         
-                            <input class="vTextField" id="id_city" maxlength="255" name="postanski_br" type="text">
+                            <input class="vTextField" id="id_city" maxlength="255" name="postanski_br" type="text" value="<?php echo $row['postanski_br'] ?>">
                 
                 </div>
             
@@ -186,7 +187,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="inline" for="id_country">Država:</label>
                         
-                            <input class="vTextField" id="id_country" maxlength="255" name="zemlja" type="text">
+                            <input class="vTextField" id="id_country" maxlength="255" name="zemlja" type="text" value="<?php echo $row['zemlja'] ?>">
                
                 </div>
             
@@ -199,7 +200,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_studij">Studij:</label>
                         
-                            <input class="vTextField" id="id_studij" maxlength="255" name="studij" type="text">
+                            <input class="vTextField" id="id_studij" maxlength="255" name="studij" type="text" value="<?php echo $row['studij'] ?>">
                 
                 </div>
 
@@ -209,7 +210,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_br_sobe">Broj sobe:</label>
                         
-                        <input class="vTextField" id="id_br_sobe" maxlength="10" name="soba_br" type="text">
+                        <input class="vTextField" id="id_br_sobe" maxlength="10" name="soba_br" type="text" value="<?php echo $row['soba_br'] ?>">
                         
                 
                 </div>
@@ -220,7 +221,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="id_br_kartice">Broj kartice:</label>
                         
-                        <input class="vTextField" id="id_br_kartice" maxlength="10" name="br_kartice" type="text">
+                        <input class="vTextField" id="id_br_kartice" maxlength="10" name="br_kartice" type="text" value="<?php echo $row['br_kartice'] ?>">
                         
                 
                 </div>
@@ -408,9 +409,8 @@ include('session.php'); //uključi provjeru sesije
 
 <div class="submit-row">
 
-<input type="submit" value="Spremi" class="default" name="_save">
-<input type="submit" value="Spremi i napravi novi" name="_addanother">
-<input type="submit" value="Spremi i nastavi editirati" name="_continue">
+<input type="submit" value="Spremi" name="vrati">
+<input type="submit" value="Spremi i nastavi izmjenu" name="nastavi">
 
 </div>
 

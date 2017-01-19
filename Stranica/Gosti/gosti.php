@@ -41,20 +41,20 @@
 
           <div class="breadcrumbs">
              <a href="http://localhost/stranica/index/index.php">Početna</a>
-             › Studenti
+             › Gosti
           </div>
 
 
           <!-- Content -->
  <div id="content" class="flex">
-             <h1>Odabir studenta</h1>
+             <h1>Gosti</h1>
              
              <div id="content-main">
              <meta charset="UTF-8">
               <ul class="object-tools">
                 <li>
                  <a href="http://localhost/stranica/studenti/dodajstudenta.php">
-                   Dodaj studenta
+                   Dodaj gosta
                 </a>
              </li>
           </ul>
@@ -77,54 +77,22 @@
                </div>
               </form>
            </div>
+         
 
-
-         <div id="changelist-filter"> <!-- FILTER na desnoj strani -->
-            <h2>Filter</h2>
-            <h3> Po Gradu </h3>
-
-            <ul>
-             <li class="selected">
-               <a href="http://localhost/stranica/studenti/grad_svi.php">Svi</a>
-            </li>
-
-            <li>
-            <?php include('grad_svi.php'); 
-            ?>
-            </li>
-            </ul>
-
-
-            
-            
-
-            <h3> Po državi </h3>
-            <ul>
-            <li class="selected">
-            <a href="link- php skripta za sve">Svi</a>
-            </li>
-
-            <li>
-            <a href="link- php skripta za Hrvatsku">Hrvatska</a>
-            </li>
-            </ul>
-         </div>
-
-
-
-<form id="changelist-form" method="post" novalidate><input type='hidden' name='' value='' />
+<form id="changelist-form" method="post" novalidate>
+<input type='hidden' name='' value='' />
 
          <div class="actions"> <!-- drop down Action -->
 
           <label>Akcija: 
             <select name="action" required="">
               <option value="" selected="selected">---------</option>
-              <option value="delete_selected">Izbriši odabrane studente</option>
+              <option value="delete_selected">Izbriši odabrane goste</option>
            </select>
          </label>
 
          <input class="select-across" name="select_across" type="hidden" value="0">
-         <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go
+         <button type="submit" class="button"  name="index" value="0">Go
          </button>
 
          </div>

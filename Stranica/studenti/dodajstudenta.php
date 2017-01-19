@@ -409,9 +409,8 @@ include('session.php'); //uključi provjeru sesije
 
 <div class="submit-row">
 
-<input type="submit" value="Spremi" class="default" name="_save">
 <input type="submit" value="Spremi i napravi novi" name="_addanother">
-<input type="submit" value="Spremi i nastavi editirati" name="_continue">
+
 
 </div>
 

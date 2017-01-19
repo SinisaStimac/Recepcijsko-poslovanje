@@ -48,10 +48,7 @@ include('session.php'); //uključi provjeru sesije
         
     </div>
     <!-- END Header -->
-    
-     
-        
-    
+   
 
     <!-- Content -->
     <div id="content" class="colMS">
@@ -71,7 +68,7 @@ include('session.php'); //uključi provjeru sesije
            
            <tr class="model-student">
             
-                <th scope="row"><a href="http://localhost/stranica/studenti/studenti.php">Studenti</a></th>
+                <th scope="row">Studenti</th>
             
 
             
@@ -86,7 +83,7 @@ include('session.php'); //uključi provjeru sesije
 
             <tr class="model-studentinvoice">
             
-                <th scope="row"><a href="http://localhost/stranica/racuni/racun_student"">Računi studenta</a></th>
+                <th scope="row">Računi studenta</th>
             
 
             
@@ -94,7 +91,7 @@ include('session.php'); //uključi provjeru sesije
             
 
             
-                <td><a href=" " class="changelink">Izmjeni</a></td>
+                <td><a href="http://localhost/stranica/racuni/racun_student.php" class="changelink">Izmjeni</a></td>
             
             </tr>
 
@@ -103,30 +100,30 @@ include('session.php'); //uključi provjeru sesije
 
              <tr class="model-service">
             
-                <th scope="row"><a href="/Stranica/Usluge/usluge.php">Usluge</a></th>
+                <th scope="row">Usluge</th>
             
 
             
-                <td><a href="/Stranica/Usluge/usluge.php" class="addlink">Dodaj</a></td>
+                <td><a href="/Stranica/Usluge/dodaj uslugu.php" class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href="/Stranica/Usluge/izmjena_usluge.php" class="changelink">Izmjeni</a></td>
+                <td><a href="/Stranica/Usluge/promjena usluge.php" class="changelink">Izmjeni</a></td>
             
             </tr>
 
 
             <tr class="model-room">
             
-                <th scope="row"><a href=" ">Sobe</a></th>
+                <th scope="row">Sobe</th>
             
 
             
-                <td><a href=" " class="addlink">Dodaj</a></td>
+                <td><a href="http://localhost/stranica/sobe/dodavanje sobe" class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href=" " class="changelink">Izmjeni</a></td>
+                <td><a href="http://localhost/stranica/sobe/promjena sobe" class="changelink">Izmjeni</a></td>
             
             </tr>
 
@@ -137,7 +134,7 @@ include('session.php'); //uključi provjeru sesije
 
             <tr class="model-gueststatus">
             
-                <th scope="row"><a href=" ">Gosti</a></th>
+                <th scope="row">Gosti</th>
             
 
             
@@ -151,15 +148,15 @@ include('session.php'); //uključi provjeru sesije
         
             <tr class="model-reservation">
             
-                <th scope="row"><a href=" ">Rezervacije</a></th>
+                <th scope="row">Rezervacije</th>
             
 
             
-                <td><a href=" " class="addlink">Dodaj</a></td>
+                <td><a href="" class="addlink">Dodaj</a></td>
             
 
             
-                <td><a href=" " class="changelink">Izmjeni</a></td>
+                <td><a href="http://localhost/stranica/rezervacije/izmjena_rezervacija.php" class="changelink">Izmjeni</a></td>
             
             </tr> 
 

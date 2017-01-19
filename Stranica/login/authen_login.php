@@ -19,6 +19,7 @@ $password = stripslashes($password);
 $username = mysqli_real_escape_string($connection, $username);
 $password = mysqli_real_escape_string($connection, $password);
 
+
 // provjeri da li ima istovjetne username i password u bazi
 $query = "SELECT * FROM `korisnici` WHERE BINARY username='$username' and password='$password'"; //case sensitive
  
@@ -31,7 +32,7 @@ if ($count == 1)
 
 
 	$_SESSION['login_user']= $username;  //spremanje sesije
-	header("refresh: 1; url=http://localhost/stranica/index/index.php"); 
+	header("refresh: 0; url=http://localhost/stranica/index/index.php"); 
 
 
 
@@ -39,7 +40,7 @@ if ($count == 1)
 
 else{
 
-header("refresh: 1; url=http://localhost/stranica/login/login.php"); 
+header("refresh: 0; url=http://localhost/stranica/login/login.php"); 
 
 
 }

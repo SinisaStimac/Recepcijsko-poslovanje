@@ -26,6 +26,7 @@ $br_kartice = mysqli_real_escape_string($link, $_POST['br_kartice']);
 
 
 $sql = "INSERT INTO student (ime, prezime, email, oib, datum_rod, adresa, grad, postanski_br, zemlja, telefon, studij, soba_br, br_kartice) VALUES ('$ime', '$prezime', '$email', '$oib', '$datum_rod', '$adresa', '$grad', '$postanski_br', '$zemlja', '$telefon', '$studij', '$soba_br', '$br_kartice') ";
+
 if(mysqli_query($link, $sql)){
 
 header("refresh: 1; url=http://localhost/stranica/studenti/studenti.php");

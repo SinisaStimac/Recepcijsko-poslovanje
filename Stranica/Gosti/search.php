@@ -1,4 +1,6 @@
-<?php
+﻿<?php
+
+
 
 $link = mysqli_connect("localhost", "root", "", "recepcijsko poslovanje");
  
@@ -7,8 +9,22 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
  
-// Attempt select query execution
-$sql = "SELECT * FROM student";
+mysqli_set_charset($link,"utf8");
+
+
+
+if (isset($_GET['search']) && $_GET['search'] != "") 
+
+{
+
+$search = $_GET['search']; 
+
+
+$sql = "SELECT * FROM student WHERE  (ime LIKE '%$search%' OR prezime LIKE '%$search%' OR oib LIKE '%$search%' OR grad LIKE '%$search%') ORDER BY prezime ASC "; } // pretražuje ime, prezime, oib, grad
+
+else {$sql = "SELECT * FROM student ORDER BY prezime ASC";}
+
+
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
        
@@ -18,7 +34,7 @@ if($result = mysqli_query($link, $sql)){
 
             echo "<tr>";
 
-            echo "<td><input type='checkbox'></td>";
+                echo "<td><input type='checkbox' " . $row['id'] . "></td>";
                 echo "<td>" . $row['ime'] . "</td>";
                 echo "<td>" . $row['prezime'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
