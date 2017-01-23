@@ -50,7 +50,7 @@
               <ul class="object-tools">
                 <li>
                  <a href="http://localhost/stranica/studenti/dodajstudenta.php">
-                   Dodaj studenta
+                   Dodaj račun
                 </a>          
               </li>                      
 
@@ -78,12 +78,12 @@
            </div>
          
 
-<form id="changelist-form" method="post" novalidate>
+<!--  <form id="changelist-form" method="post" novalidate>
 <input type='hidden' name='' value='' />
 
-         <!-- drop down Action -->
+         
 
-          <!--
+          
           <div class="actions"> 
           <label>Akcija: 
             <select name="action" required="">
@@ -116,7 +116,7 @@
             </th>
 
 
-            <!-- makni sorting, možda ne treba, dodatna opcija -->
+           
             <th scope="col" class="sortable column-last_name sorted ascending">
               <div class="text"><a href="link php prezime">Prezime</a></div>
               <div class="clear"></div>
@@ -182,7 +182,7 @@
          </th>
 
           <th scope="col" class="izmjena">
-            <div class="text">Izmjena</div>
+            <div class="text">Izmjena/Pregled</div>
             <div class="clear"></div>
          </th> 
          

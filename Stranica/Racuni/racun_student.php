@@ -53,48 +53,45 @@ include('session.php'); //uključi provjeru sesije
 </div>
 
     
+ <div id="content" class="flex">
+             <h1>Lista napravljenih računa</h1>
+             
+             <div id="content-main">
+             <meta charset="UTF-8">
+              <ul class="object-tools">
+                <li>
+                 <a href="http://localhost/stranica/racuni/napraviracun.php">
+                   Napravi račun
+                </a>          
+              </li>                      
 
-    
-        
-    
+              </div>
 
-    <!-- Content -->
-    <div id="content" class="flex">
-        
-        <h1>Odaberi račun</h1>
-        
-  <div id="content-main">
-    
-        <ul class="object-tools">
-          
-            
-            <li>
               
-              <a href="" class="addlink">
-                Dodaj račun
-              </a>
-            </li>
-            
-          
-        </ul>
-    
-    
-    <div class="module" id="changelist">
-      
+                 
 
-      <form id="changelist-form" method="post" novalidate=""><input type="hidden" name="changelist" value="">
-      
 
-      
+         <div class="module filtered" id="changelist">
+
+
+           <div id="toolbar">
+          <!-- SEARCH BAR pretražuje ime, prezime, oib, grad-->
+              <form method="GET" action="http://localhost/stranica/racuni/racun_student.php">
+
+               <div><!-- DIV potreban za ispravan HTML -->
+                 <label for="searchbar"><img src="http://localhost/stranica/studenti/search.svg" alt="Search"></label>
+
+                 <input type="text" size="40" name="search" >
+
+                 <input type="submit" name='submit' value="Search">
+               </div>
+              </form>
           
-<div class="actions">
-    <label>Akcija: <select name="action" required="">
-<option value="" selected="selected">---------</option>
-<option value="delete_selected">Izbriši račun</option>
-</select></label><input class="select-across" name="select_across" type="hidden" value="0">
-    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
- 
-</div>
+            </div>
+
+
+              
+
 
 
 <div class="results">
@@ -104,47 +101,51 @@ include('session.php'); //uključi provjeru sesije
 
 <tr>
 
-<th scope="col" class="action-checkbox-column">
-   
-   <div class="text"><span><input type="checkbox" id="action-toggle"></span></div>
-   <div class="clear"></div>
-</th>
-<th scope="col" class="column-id">
-   
-     
-   
-   <div class="text">ID</div>
-   <div class="clear"></div>
-</th>
+<th scope="col" class="sortable column-br_racuna"> 
+               <div class="text"><a href="">Broj računa</a></div>
+               <div class="clear"></div>   
+            </th>
+
 <th scope="col" class="sortable column-student">
-   
-     
-   
-   <div class="text"><a href="/php upit">Student</a></div>
+     <div class="text"><a href="">Student</a></div>
    <div class="clear"></div>
 </th>
+
+<th scope="col" class="sortable column-oib">
+     <div class="text"><a href="">OIB</a></div>
+   <div class="clear"></div>
+</th>
+
+<th scope="col" class="sortable column-mjesec">
+     <div class="text"><a href="">Za mjesec</a></div>
+   <div class="clear"></div>
+</th>
+
+<th scope="col" class="sortable column-iznos">
+     <div class="text"><a href="">Iznos računa</a></div>
+   <div class="clear"></div>
+</th>
+
+<th scope="col" class="sortable column-placeno">
+     <div class="text"><a href="">Plaćeno</a></div>
+   <div class="clear"></div>
+</th>
+
+<th scope="col" class="izmjena">
+            <div class="text">Izmjena/Pregled</div>
+            <div class="clear"></div>
+         </th> 
+         
+
 </tr>
 </thead>
-<tbody>
 
+<?php
+         include('search_racuni.php'); //uključi provjeru sesije
+?>
 
-<tr class="row1">
-<td class="action-checkbox">
-<input class="action-select" name="_selected_action" type="checkbox" value="2"></td>
-<th class="field-id"><a href="">2</a></th>
-<td class="field-student nowrap">Josip Auzina</td></tr>
-
-
-<tr class="row2">
-<td class="action-checkbox">
-<input class="action-select" name="_selected_action" type="checkbox" value="1"></td>
-<th class="field-id"><a href="">1</a>
-</th>
-<td class="field-student nowrap">Pat Mat</td></tr>
-
-</tbody>
 </table>
-</div>
+
 
 
       </form>

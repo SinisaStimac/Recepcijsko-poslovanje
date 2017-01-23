@@ -5,14 +5,14 @@ include('session.php'); //uključi provjeru sesije
 <!DOCTYPE html>
 
 
-<title>Dodaj studenta</title>
+
 <link rel="stylesheet" type="text/css" href="base.css">
 <link rel="stylesheet" type="text/css" href="forms.css">
 
 <head>
 <!-- <meta charset="utf8mb4_croatian_ci"> -->
 
-<title>Add Record Form</title>
+<title>Dodaj račun</title>
 </head>
 
 
@@ -48,8 +48,8 @@ include('session.php'); //uključi provjeru sesije
     
 <div class="breadcrumbs">
 <a href="http://localhost/stranica/index/index.php">Početna</a>
-› <a href="http://localhost/stranica/studenti/studenti.php">Studenti</a>
-› Dodaj studenta
+› <a href="http://localhost/stranica/studenti/studenti.php">Dodaj studenta</a>
+
 </div>
 
     
@@ -61,7 +61,7 @@ include('session.php'); //uključi provjeru sesije
 
 
 
-    <form action="insertstudent.php" method="post" id="student_form" ><input type="hidden">
+    <form action=" .php" method="post" id="student_form" ><input type="hidden">
     <div>
 
 
@@ -231,177 +231,7 @@ include('session.php'); //uključi provjeru sesije
     
 </fieldset>
 
-
-  <fieldset class="module aligned">
-
-    <h2>PODACI O SOBI</h2>
-    
-    
-        <div class="form-row field-level field-room">
-            
-            
-                <div class="field-box field-level">
-                    
-                    
-                        <label for="id_level">Kat:</label>
-                        
-                            <input class="vTextField" id="id_level" maxlength="255" name="level" type="text">
-                    
-                    
-                </div>
-            
-                <div class="field-box field-br_sobe">
-                    
-                    
-                        <label class="inline" for="id_br_sobe">Soba:</label>
-                        
-                            <input class="vTextField" id="broj_sobe" maxlength="255" name="broj_sobe" type="text">
-                
-                    
-                </div>
-            
-        </div>
-    
-        <div class="form-row field-note">
-            
-            
-                <div>
-             
-                        <label for="id_note">Bilješke:</label>
-                        
-                            <textarea class="vLargeTextField" cols="40" id="id_note" name="note" rows="10"></textarea>
-                
-                </div>
-            
-        </div>
-    
-</fieldset>
-
-    
-
-  
-  <div class="tabular inline-related"> 
-
-
-
-<fieldset class="module ">
-
-   <h2>Evidencijs posjeta</h2>
    
-   <table>
-     <thead><tr>
-       <th class="original"></th>
-     
-       
-         <th>Ime-prezime posjetitelja
-         
-         </th>
-       
-     
-         <th>Vrijeme ulaza 
-         
-         </th>
-       
-     
-       
-         <th>Vrijeme izlaza
-         
-         </th>
-       
-
-     
-     </tr>
-     </thead>
-
-     <tbody>
-     
-        
-        <tr class="form-row row1 " id="student_visit_record">
-
-        <td class="original">
-          
-          <input id="id_student_visit_records" name="student_visit_records" type="hidden">
-          
-        </td>
-        
-       
-        <td class="field-info_visitor">
-              
-           <input class="vTextField" id="id_student_visit_records info_visitor" maxlength="255" name="student_visit_records info_visitor" type="text">
-              
-        </td>
-              
-                    
-            
-              
-              <td class="field-time_of_entrance">
-              
-                  
-                  <p class="datetime">Datum: <input class="vDateField" id="id_student_visit_records time_of_entrance" name="student_visit_records time_of_entrance" size="10" type="text">
-                  <span class="datetimeshortcuts"
-                  >&nbsp;
-                  <a href="">Danas</a>
-                  &nbsp;|&nbsp;
-                  <a href="" id="calendarlink1">
-                  <span class="date-icon" title="Choose a Date">
-                  </span></a>
-                  </span><br>
-                  Vrijeme: 
-                  <input class="vTimeField" id="id_student_visit_records time_of_entrance" name="student_visit_records time_of_entrance_1" size="8" type="text">
-                  <span class="datetimeshortcuts">
-                  &nbsp;
-                  <a href="">
-                  Sada
-                  </a>&nbsp;|&nbsp;<a href="" id="clocklink"><span class="clock-icon" title="Choose a Time">                    
-                  </span></a>
-                  </span>
-                  
-              
-              </td>
-              
-            
-          
-            
-              
-              <td class="field-time_of_exit">
-              
-               <p class="datetime">Datum: <input class="vDateField" id="id_student_visit_records time_of_exit" name="student_visit_records time_of_exit" size="10" type="text">
-                  <span class="datetimeshortcuts"
-                  >&nbsp;
-                  <a href="">Danas</a>
-                  &nbsp;|&nbsp;
-                  <a href="" id="calendarlink1">
-                  <span class="date-icon" title="Choose a Date">
-                  </span></a>
-                  </span><br>
-                  Vrijeme: 
-                  <input class="vTimeField" id="id_student_visit_records time_of_exit" name="student_visit_records time_of_exit" size="8" type="text">
-                  <span class="datetimeshortcuts">
-                  &nbsp;
-                  <a href="">
-                  Sada
-                  </a>&nbsp;|&nbsp;<a href="" id="clocklink"><span class="clock-icon" title="Choose a Time">                    
-                  </span></a>
-                  </span>    
-                  
-              
-              </td>
-     
-        </tr>
-     
-        
-        <tr class="form-row row2  empty-form" id="student_visit_records-empty">
-        <td class="original">
-          
-          <input id="id_student_visit_records-__prefix__-id" name="student_visit_records-__prefix__-id" type="hidden">
-          <input id="id_student_visit_records-__prefix__-student" name="student_visit_records-__prefix__-student" type="hidden">
-   
-     
-     </tbody>
-    </table>
-
-    </fieldset>
-    
   </div>
 </div>
 

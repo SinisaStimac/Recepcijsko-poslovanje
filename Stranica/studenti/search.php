@@ -48,7 +48,7 @@ if($result = mysqli_query($link, $sql)){
                 echo "<td>" . $row['studij'] . "</td>";
                 echo "<td>" . $row['soba_br'] . "</td>";
                 echo "<td>" . $row['br_kartice'] . "</td>";
-                echo "<td><a href='izmijenistudenta.php?id=" . $row['id'] . "'> Izmijeni </a>";
+                echo "<td><a href='izmijenistudenta.php?id=" . $row['id'] . "'> Izmijeni/Pregled </a>";
                 echo "<td><a href='izbrisistudenta.php?id=" . $row['id'] . "'> Izbriši </a>";
 
 
