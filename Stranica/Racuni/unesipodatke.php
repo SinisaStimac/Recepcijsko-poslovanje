@@ -1,5 +1,6 @@
 <?php
 include('session.php'); //uključi provjeru sesije
+include('odaberistudenta.php');
 ?>
 
 <!DOCTYPE html>
@@ -50,14 +51,14 @@ include('session.php'); //uključi provjeru sesije
     
 <div class="breadcrumbs">
 <a href="http://localhost/stranica/index/index.php">Početna</a>
-›Izrada računa
+›Dodaj račun
 </div>
 
     
     <!-- Content -->
     <div id="content" class="colM">
         
-        <h1>Izrada računa</h1>
+        <h1>Dodaj račun</h1>
         <div id="content-main">
 
 
@@ -65,12 +66,9 @@ include('session.php'); //uključi provjeru sesije
     <form action="insertracun.php" method="post" id="dodaj_racun" ><input type="hidden">
     <div>
 
-
+    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
 
      <fieldset class="module aligned">  
-
-
-
 
     
         <div class="form-row first">
@@ -79,9 +77,9 @@ include('session.php'); //uključi provjeru sesije
                 <div class="field-box field-first_name">
                     
                     
-                        <label class="required" for="id_first_name">Ime:</label>
+                     <label class="required" for="id_first_name">Ime:</label>
                         
-                            <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required>
+                       <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required value="<?php echo $row['ime'] ?>">
                         
              
                 </div>
@@ -91,7 +89,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="required inline" for="id_last_name">Prezime:</label>
                         
-                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required>
+                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required value="<?php echo $row['prezime'] ?>">
                         
                   
                 </div>
@@ -100,7 +98,7 @@ include('session.php'); //uključi provjeru sesije
                     
                     
                         <label class="required" for="id_oib_id">OIB:</label>
-                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required>
+                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required value="<?php echo $row['oib'] ?>">
                         <!-- ograničili smo unos na 11 znakva-->
                  
                 </div>
@@ -206,13 +204,13 @@ include('session.php'); //uključi provjeru sesije
 
            
             <th scope="col" class="sortable column-last_name sorted ascending">
-              <div class="text"><a href="">Prezime</a></div>
+              <div class="text"><a href="link php prezime">Prezime</a></div>
               <div class="clear"></div>
            </th>
 
 
           <th scope="col" class="sortable column-oib_id">
-           <div class="text"><a href="">OIB</a></div>
+           <div class="text"><a href="link php OIB">OIB</a></div>
            <div class="clear"></div>
          </th>
 

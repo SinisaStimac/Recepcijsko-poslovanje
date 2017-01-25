@@ -49,7 +49,7 @@ include('session.php'); //uključi provjeru sesije
     
 <div class="breadcrumbs">
 <a href="http://localhost/stranica/index/index.php">Početna</a>
-› Računi studenta
+› Pregled računa
 </div>
 
     
@@ -97,6 +97,7 @@ include('session.php'); //uključi provjeru sesije
 <div class="results">
 
 <table id="result_list">
+
 <thead>
 
 <tr>

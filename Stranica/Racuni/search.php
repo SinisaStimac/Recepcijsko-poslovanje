@@ -20,10 +20,9 @@ if (isset($_GET['search']) && $_GET['search'] != "")
 $search = $_GET['search']; 
 
 
-$sql = "SELECT * FROM racuni WHERE  (ime LIKE '%$search%' OR prezime LIKE '%$search%' OR oib LIKE '%$search%' OR br_racuna LIKE '%$search%') ORDER BY br_racuna DESC "; } 
+$sql = "SELECT * FROM student WHERE  (ime LIKE '%$search%' OR prezime LIKE '%$search%' OR oib LIKE '%$search%' ) ORDER BY prezime ASC "; } // pretražuje ime, prezime, oib, grad
 
-
-else {$sql = "SELECT * FROM racuni ORDER BY datum DESC";}
+else {$sql = "SELECT * FROM student ORDER BY prezime ASC";}
 
 
 if($result = mysqli_query($link, $sql)){
@@ -36,17 +35,12 @@ if($result = mysqli_query($link, $sql)){
             echo "<tr>";
 
                                               
-                echo "<td>" . $row['br_racuna'] . "</td>";
-                echo "<td>" . $row['ime'] . " &nbsp ". $row['prezime'] . "</td>";
+                echo "<td>" . $row['ime'] . "</td>";
+                echo "<td>" . $row['prezime'] . "</td>";
                 echo "<td>" . $row['oib'] . "</td>";
-                echo "<td>" . $row['datum'] . "</td>";
-                echo "<td>" . $row['iznos_racuna'] . "</td>";
-                echo "<td>" . $row['placeno'] . "</td>";
                 
-                echo "<td><a href='editracun.php?br_racuna=" . $row['br_racuna'] . "'> Izmjeni/Pregled </a>";
-               
-                
-                
+                echo "<td><a href='unesipodatke.php?id=" . $row['id'] . "'>Unos</a>";
+                                
                 
             echo "</tr>";
         }

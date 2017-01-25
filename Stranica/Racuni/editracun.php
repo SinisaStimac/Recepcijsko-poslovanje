@@ -1,5 +1,6 @@
 <?php
 include('session.php'); //uključi provjeru sesije
+include('odabirracuna.php');
 ?>
 
 <!DOCTYPE html>
@@ -50,38 +51,50 @@ include('session.php'); //uključi provjeru sesije
     
 <div class="breadcrumbs">
 <a href="http://localhost/stranica/index/index.php">Početna</a>
-›Izrada računa
+›Dodaj račun
 </div>
 
     
     <!-- Content -->
     <div id="content" class="colM">
         
-        <h1>Izrada računa</h1>
+        <h1>Dodaj račun</h1>
         <div id="content-main">
 
 
 
-    <form action="insertracun.php" method="post" id="dodaj_racun" ><input type="hidden">
+    <form action="edit.php" method="post" id="dodaj_racun" ><input type="hidden">
     <div>
 
-
+    <input type="hidden" name="br_racuna" value="<?php echo $row['br_racuna'];?>">
 
      <fieldset class="module aligned">  
 
-
-
-
     
+        <div class="form-row first">
+
+         <div class="field-box field-br_racuna">
+                    
+                    
+                     <label class="required" for="br_racuna">Broj računa:</label>
+                        
+                       <input class="vTextField" id="id_first_name" maxlength="255" name="br_racuna" type="text" required value="<?php echo $row['br_racuna'] ?>">
+                        
+             
+                </div>
+
+
+        </div>
+
         <div class="form-row first">
             
             
                 <div class="field-box field-first_name">
                     
                     
-                        <label class="required" for="id_first_name">Ime:</label>
+                     <label class="required" for="id_first_name">Ime:</label>
                         
-                            <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required>
+                       <input class="vTextField" id="id_first_name" maxlength="255" name="ime" type="text" required value="<?php echo $row['ime'] ?>">
                         
              
                 </div>
@@ -91,7 +104,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label class="required inline" for="id_last_name">Prezime:</label>
                         
-                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required>
+                            <input class="vTextField" id="id_last_name" maxlength="255" name="prezime" type="text" required value="<?php echo $row['prezime'] ?>">
                         
                   
                 </div>
@@ -100,10 +113,12 @@ include('session.php'); //uključi provjeru sesije
                     
                     
                         <label class="required" for="id_oib_id">OIB:</label>
-                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required>
+                        <input class="vTextField" id="id_oib_id" maxlength="11" name="oib" type="text" required value="<?php echo $row['oib'] ?>">
                         <!-- ograničili smo unos na 11 znakva-->
                  
                 </div>
+
+
             
         </div>
     
@@ -122,7 +137,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="datum">Za mjesec</label>
                         
-                            <input class="vTextField" id="id_email" maxlength="254" name="datum" type="text" required>
+                            <input class="vTextField" id="id_email" maxlength="254" name="datum" type="text" required value="<?php echo $row['datum'] ?>">
                    
                 </div>
 
@@ -131,7 +146,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="iznos_racuna">Iznos računa</label>
                         
-                        <input class="vTextField" id="iznos_racuna" maxlength="255" name="iznos_racuna" type="text" required>                 
+                        <input class="vTextField" id="iznos_racuna" maxlength="255" name="iznos_racuna" type="text" required value="<?php echo $row['iznos_racuna'] ?>">                 
                 
                 </div>
 
@@ -140,7 +155,7 @@ include('session.php'); //uključi provjeru sesije
                     
                         <label for="placeno">Plaćeno</label>
                         
-                        <input class="vTextField" id="placeno" maxlength="255" name="placeno" type="text" required>                 
+                        <input class="vTextField" id="placeno" maxlength="255" name="placeno" type="text" required value="<?php echo $row['placeno'] ?>">                 
                 
                 </div>
         </div>
@@ -157,7 +172,7 @@ include('session.php'); //uključi provjeru sesije
 
 <div class="submit-row">
 
-<input type="submit" value="Spremi i napravi novi" name="_addanother">
+<input type="submit" value="Spremi izmjene" name="_addanother">
 
 
 </div>
@@ -190,51 +205,57 @@ include('session.php'); //uključi provjeru sesije
 
       <div class="results">
 
-          <table id="result_list">
+         <div class="results">
 
-           <thead>
-            <tr>
+<table id="result_list">
 
-               
+<thead>
 
+<tr>
 
-            <th scope="col" class="sortable column-first_name"> 
-               <div class="text"><a href="">Ime</a></div>
+<th scope="col" class="sortable column-br_racuna"> 
+               <div class="text"><a href="">Broj računa</a></div>
                <div class="clear"></div>   
             </th>
 
+<th scope="col" class="sortable column-student">
+     <div class="text"><a href="">Student</a></div>
+   <div class="clear"></div>
+</th>
 
-           
-            <th scope="col" class="sortable column-last_name sorted ascending">
-              <div class="text"><a href="">Prezime</a></div>
-              <div class="clear"></div>
-           </th>
+<th scope="col" class="sortable column-oib">
+     <div class="text"><a href="">OIB</a></div>
+   <div class="clear"></div>
+</th>
 
+<th scope="col" class="sortable column-mjesec">
+     <div class="text"><a href="">Za mjesec</a></div>
+   <div class="clear"></div>
+</th>
 
-          <th scope="col" class="sortable column-oib_id">
-           <div class="text"><a href="">OIB</a></div>
-           <div class="clear"></div>
-         </th>
+<th scope="col" class="sortable column-iznos">
+     <div class="text"><a href="">Iznos računa</a></div>
+   <div class="clear"></div>
+</th>
 
+<th scope="col" class="sortable column-placeno">
+     <div class="text"><a href="">Plaćeno</a></div>
+   <div class="clear"></div>
+</th>
 
-        
-         
-
-         <th scope="col" class="brisanje">
-            <div class="text">Unos</div>
+<th scope="col" class="izmjena">
+            <div class="text">Izmjena/Pregled</div>
             <div class="clear"></div>
-         </th>          
-
-         </tr></thead>
-         
-          
-
-            <?php
-         include('search.php'); //uključi provjeru sesije
-         ?>
+         </th> 
          
 
-         </table> 
+</tr>
+</thead>
+
+<?php
+         include('search_racuni.php'); //uključi provjeru sesije
+?>
+
 
          </form>        
          
